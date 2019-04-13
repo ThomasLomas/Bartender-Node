@@ -1,0 +1,26 @@
+{
+  "name": "Bartender-Node",
+  "version": "0.0.0",
+  "description": "",
+  "main": "oled.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasLomas/Bartender-Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomasLomas/Bartender-Node/issues"
+  },
+  "homepage": "https://github.com/ThomasLomas/Bartender-Node#readme",
+  "dependencies": {
+    "dotstar": "^1.0.0",
+    "express": "^4.16.4",
+    "pi-spi": "^1.0.3",
+    "socket.io": "^2.2.0",
+    "winston": "^3.2.1"
+  }
+}
