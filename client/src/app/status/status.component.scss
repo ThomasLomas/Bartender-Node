@@ -1,0 +1,9 @@
+.status {
+    &-ready {
+        color: darkgreen;
+    }
+
+    &-error {
+        color: red;
+    }
+}

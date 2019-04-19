@@ -1,0 +1,111 @@
+{
+    "ingredients": [
+        {
+            "name": "Gin"
+        },
+        {
+            "name": "Tonic"
+        },
+        {
+            "name": "Rum"
+        },
+        {
+            "name": "Coke"
+        },
+        {
+            "name": "Vodka"
+        },
+        {
+            "name": "Orange Juice"
+        },
+        {
+            "name": "Tequila"
+        },
+        {
+            "name": "Margarita Mix"
+        }
+    ],
+    
+    "pumps": [
+        {
+            "name": "Pump 1",
+            "pin": 17,
+            "value": "gin"
+        },
+        {
+            "name": "Pump 2",
+            "pin": 27,
+            "value": "tonic"
+        },
+        {
+            "name": "Pump 3",
+            "pin": 22,
+            "value": null
+        },
+        {
+            "name": "Pump 4",
+            "pin": 23,
+            "value": null
+        },
+        {
+            "name": "Pump 5",
+            "pin": 24,
+            "value": null
+        },
+        {
+            "name": "Pump 6",
+            "pin": 25,
+            "value": null
+        }
+    ],    
+
+    "recipes": [
+        {
+            "name": "Rum & Coke",
+            "ingredients": {
+                "rum": 50,
+                "coke": 150
+            }
+        }, {
+            "name": "Gin & Tonic",
+            "ingredients": {
+                "gin": 50,
+                "tonic": 150
+            }
+        }, {
+            "name": "Long Island",
+            "ingredients": {
+                "gin": 15,
+                "rum": 15,
+                "vodka": 15,
+                "tequila": 15,
+                "coke": 100,
+                "oj": 30
+            }
+        }, {
+            "name": "Screwdriver",
+            "ingredients": {
+                "vodka": 50,
+                "oj": 150
+            }
+        }, {
+            "name": "Margarita",
+            "ingredients": {
+                "tequila": 50,
+                "mmix": 150
+            }
+        }, {
+            "name": "Gin & Juice",
+            "ingredients": {
+                "gin": 50,
+                "oj": 150
+            }
+        }, {
+            "name": "Tequila Sunrise",
+            "ingredients": {
+                "tequila": 50,
+                "oj": 150
+            }
+        }
+    ]    
+}

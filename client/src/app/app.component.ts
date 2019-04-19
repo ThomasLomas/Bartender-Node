@@ -7,9 +7,6 @@ import { SocketService } from './socket.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(socketService: SocketService) {
-    socketService.onNewMessage().subscribe(message => {
-      console.log(message);
-    });
+  constructor() {
   }
 }

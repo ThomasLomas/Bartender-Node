@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-card-content>
+    <h2 [ngClass]="statusClass">{{status}}</h2>
+    <p *ngIf="statusDesc">{{ statusDesc }}</p>
+    <mat-progress-bar [value]="barValue" [mode]="barMode"></mat-progress-bar>
+  </mat-card-content>
+</mat-card>

@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 interface Message {
-  data: any;
+  type: string;
+  data?: any;
 }
 
 @Injectable({

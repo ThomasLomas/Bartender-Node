@@ -6,14 +6,24 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatProgressBarModule, MatCardModule, MatTableModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule } from '@angular/material';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { StatusComponent } from './status/status.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { CustomComponent } from './custom/custom.component';
+import { ConfigurationComponent } from './configuration/configuration.component';
+import { ConfigurationIngredientsComponent } from './configuration-ingredients/configuration-ingredients.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    DashboardComponent
+    DashboardComponent,
+    StatusComponent,
+    RecipesComponent,
+    CustomComponent,
+    ConfigurationComponent,
+    ConfigurationIngredientsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +34,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatProgressBarModule,
+    MatCardModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

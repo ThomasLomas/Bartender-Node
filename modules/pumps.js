@@ -1,5 +1,6 @@
 const config = require('../config');
 const logger = require('../logger');
+const db = require('../db');
 
 try {
     var gpio = require('rpi-gpio')
@@ -20,7 +21,7 @@ class Pumps {
     }
 
     setup() {
-        return Promise.map(config.pumps, (pump) => {
+        return Promise.map(db.get('pumps'), (pump) => {
             logger.info(`Setting up ${pump.name}`);
             return gpiop.setup(pump.pin, gpio.DIR_HIGH);
         }).then(() => {
