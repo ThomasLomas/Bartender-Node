@@ -30,6 +30,9 @@ app.use((req, res, next) => {
 // Serve up angular frontend - Could be served via a separate HTTP server
 app.use(express.static(path.join(__dirname, 'client', 'dist', 'bartender')));
 
+// Route 404 pages to Angular single page application
+app.use('*', (req, res) => { res.sendFile(path.join(__dirname, 'client', 'dist', 'bartender', 'index.html')); });
+
 // Start application
 pumps.setup().then(() => {
     server.listen(config.http.port, () => {
