@@ -25,12 +25,22 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, 'client', 'dist', 'bartender')));
 
 // Start application
-server.listen(config.http.port, () => {
-    logger.info(`Server started on ${config.http.port}`);
-    lights.startChase();
-    pumps.setup().then(() => {
-        pumps.on(config.pumps[3].pin, 10000);
-//        return Promise.mapSeries(config.pumps, pump => pumps.on(pump.pin, 2000)); 
+pumps.setup().then(() => {
+    server.listen(config.http.port, () => {
+        logger.info(`Server started on ${config.http.port}`);
+        lights.startChase();
+    });
+
+    io.on('connection', (socket) => {
+        logger.info(`New client connected ${socket.id}`);
+
+        socket.on('message', (m) => {
+            logger.info(`Message received from ${socket.id}: ${JSON.stringify(m)}`);
+        });
+
+        socket.on('disconnect', () => {
+            logger.info(`Client disconnected ${socket.id}`);
+        });
     });
 });
 

@@ -1,8 +1,18 @@
 const config = require('../config');
 const logger = require('../logger');
 
-const gpio = require('rpi-gpio')
-const gpiop = gpio.promise;
+try {
+    var gpio = require('rpi-gpio')
+    var gpiop = gpio.promise;
+} catch (er) {
+    var gpio = {
+        setMode: () => {}
+    };
+    var gpiop = {
+        setup: () => {},
+        write: () => {}
+    };
+}
 
 class Pumps {
     constructor() {

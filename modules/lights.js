@@ -1,13 +1,20 @@
-const dotstar = require('dotstar');
-const SPI = require('pi-spi');
 const config = require('../config');
 
-const spi = SPI.initialize(config.lights.path);
+try {
+    const dotstar = require('dotstar');
+    const SPI = require('pi-spi');
 
-const ledStrip = new dotstar.Dotstar(spi, {
-	  length: config.lights.stripLength
-});
-
+    const spi = SPI.initialize(config.lights.path);
+    var ledStrip = new dotstar.Dotstar(spi, {
+        length: config.lights.stripLength
+    });
+} catch (er) {
+    var ledStrip = {
+        clear: () => {},
+        sync: () => {},
+        set: () => {}
+    };
+}
 
 class Lights {
     constructor() {

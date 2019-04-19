@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  socketPath: 'http://192.168.1.124:80/'
 };
