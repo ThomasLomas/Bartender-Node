@@ -29,6 +29,7 @@ server.listen(config.http.port, () => {
     logger.info(`Server started on ${config.http.port}`);
     lights.startChase();
     pumps.setup().then(() => {
+        pumps.on(config.pumps[3].pin, 10000);
 //        return Promise.mapSeries(config.pumps, pump => pumps.on(pump.pin, 2000)); 
     });
 });
