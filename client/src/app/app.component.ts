@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { SocketService } from './socket.service';
+import { Observable } from 'rxjs';
+import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +10,10 @@ import { SocketService } from './socket.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor() {
-  }
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches)
+    );
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
 }

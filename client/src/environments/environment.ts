@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  socketPath: 'http://localhost:80/'
+  socketPath: 'http://localhost:80/',
+  httpPath: 'http://localhost:80/'
 };
 
 /*

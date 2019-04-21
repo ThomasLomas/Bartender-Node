@@ -1,0 +1,21 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxFlex="500px" fxFlex.xs="100%">
+    <mat-card-title>New Ingredient</mat-card-title>
+    <form [formGroup]="ingredientForm" autocomplete="off" novalidate (ngSubmit)="createIngredient(ingredientForm.value)" fxLayout="column wrap"
+      fxLayoutAlign="left left" fxLayoutGap="10px">
+      <mat-card-content class="form-container">
+        <mat-form-field>
+          <input matInput placeholder="Ingredient Name" type="text" formControlName="name" id="name">
+          <mat-hint align="end">Not more than 100 characters long.</mat-hint>
+          <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+          <mat-error *ngIf="hasError('name', 'maxlength')">You have more than 100 characters</mat-error>        
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-actions align="center">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!ingredientForm.valid">Create</button>
+        <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</section>

@@ -4,12 +4,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { CustomComponent } from './custom/custom.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
+import { ConfigurationIngredientsCreateComponent } from './configuration-ingredients-create/configuration-ingredients-create.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'recipes', component: RecipesComponent },
   { path: 'custom', component: CustomComponent },
-  { path: 'configuration', component: ConfigurationComponent }
+  { path: 'configuration', component: ConfigurationComponent },
+  { path: 'configuration/ingredients/create', component: ConfigurationIngredientsCreateComponent }
 ];
 
 @NgModule({

@@ -7,6 +7,8 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 // Custom Modules
 const db = require('./db');
@@ -18,17 +20,27 @@ const pumps = require('./modules/pumps');
 const httpRoutes = require('./routes/http');
 const socketRoutes = require('./routes/socket');
 
+// For JSON posting
+app.use(cors());
+app.use(bodyParser.json());
+
 // Add modules to the req object for easy reference
 app.use((req, res, next) => {
     req.logger = logger;
     req.lights = lights;
     req.pumps = pumps;
     req.db = db;
+    req.io = io;
     next();
 });
 
 // Serve up angular frontend - Could be served via a separate HTTP server
 app.use(express.static(path.join(__dirname, 'client', 'dist', 'bartender')));
+
+// Express HTTP Routes
+Object.keys(httpRoutes).forEach(routeName => {
+    app.use(`/${routeName}`, httpRoutes[routeName]);
+});
 
 // Route 404 pages to Angular single page application
 app.use('*', (req, res) => { res.sendFile(path.join(__dirname, 'client', 'dist', 'bartender', 'index.html')); });

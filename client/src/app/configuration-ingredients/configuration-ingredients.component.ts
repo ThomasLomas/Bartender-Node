@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SocketService } from '../socket.service';
 import { filter } from 'rxjs/operators';
 
-interface Ingredient {
+export interface Ingredient {
   name: 'string';
 }
 
@@ -12,7 +12,7 @@ interface Ingredient {
   templateUrl: './configuration-ingredients.component.html',
   styleUrls: ['./configuration-ingredients.component.scss']
 })
-export class ConfigurationIngredientsComponent implements OnInit {
+export class ConfigurationIngredientsComponent implements OnInit, OnDestroy {
 
   ingredients: Ingredient[] = [];
   displayedColumns: string[] = ['name', 'actions'];
@@ -23,9 +23,11 @@ export class ConfigurationIngredientsComponent implements OnInit {
   ngOnInit() {
     this.socketService.send({ type: 'IngredientsListRequest' });
     this.statusSubscription = this.socketService.onNewMessage().pipe(filter(message => message.type === 'IngredientsList')).subscribe(message => {
-      console.log('IngredientsList received', message.data);
       this.ingredients = message.data['ingredients'];
     });
   }
 
+  ngOnDestroy() {
+    this.statusSubscription.unsubscribe();
+  }
 }
