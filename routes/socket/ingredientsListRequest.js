@@ -10,9 +10,6 @@ module.exports = class IngredientsListRequest {
     }
 
     invoke(io, socket) {
-        // Debug :)
-        // require('../../modules/produce').produce('5cbce18e9ed332427cb201fe', io);
-
         logger.info('Received a IngredientsListRequest');
         socket.send({
             type: 'IngredientsList',
