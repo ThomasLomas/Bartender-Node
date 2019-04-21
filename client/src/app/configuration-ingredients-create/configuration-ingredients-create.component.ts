@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredient } from '../configuration-ingredients/configuration-ingredients.component';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Ingredient, IngredientService } from '../ingredient.service';
 
 @Component({
   selector: 'app-configuration-ingredients-create',
@@ -13,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class ConfigurationIngredientsCreateComponent implements OnInit {
   public ingredientForm: FormGroup;
 
-  constructor(private location: Location, private http: HttpClient) { }
+  constructor(private location: Location, private ingredientService: IngredientService) { }
 
   ngOnInit() {
     this.ingredientForm = new FormGroup({
@@ -27,7 +26,7 @@ export class ConfigurationIngredientsCreateComponent implements OnInit {
 
   createIngredient(ingredientFormValue: Ingredient) {
     if (this.ingredientForm.valid) {
-      this.http.post(`${environment.httpPath}ingredients`, ingredientFormValue).toPromise().then(resp => {
+      this.ingredientService.create(ingredientFormValue).then(() => {
         this.location.back();
       });
     }

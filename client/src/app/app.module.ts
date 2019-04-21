@@ -16,6 +16,8 @@ import { ConfigurationIngredientsCreateComponent } from './configuration-ingredi
 import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfigurationPumpsComponent } from './configuration-pumps/configuration-pumps.component';
+import { ConfigurationRecipesComponent } from './configuration-recipes/configuration-recipes.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     CustomComponent,
     ConfigurationComponent,
     ConfigurationIngredientsComponent,
-    ConfigurationIngredientsCreateComponent
+    ConfigurationIngredientsCreateComponent,
+    ConfigurationPumpsComponent,
+    ConfigurationRecipesComponent
   ],
   imports: [
     BrowserModule,

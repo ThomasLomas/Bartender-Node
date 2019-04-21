@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
     res.json({ success: true });
 });
 
-router.delete('/{id}', (req, res) => {
+router.delete('/:id', (req, res) => {
     req.logger.info(`Received new ingredient POST request`);
     const existsCheck = req.db.get('ingredients').find({ _id: req.params.id }).value();
 

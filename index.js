@@ -62,7 +62,7 @@ pumps.setup().then(() => {
             // Route to the socket route handler for this request
             if (m.type && socketRoutes[m.type]) {
                 logger.info(`Routing message of type ${m.type}`);
-                new socketRoutes[m.type](io, socket);
+                new socketRoutes[m.type](io, socket, m);
             }
         });
 

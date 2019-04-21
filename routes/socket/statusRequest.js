@@ -1,4 +1,5 @@
 const logger = require('../../logger');
+const produce = require('../../modules/produce');
 
 /**
  * Used for getting the production status
@@ -12,12 +13,7 @@ module.exports = class StatusRequest {
         logger.info('Received a StatusRequest');
         socket.send({
             type: 'Status',
-            data: {
-                status: 'producing',
-                recipe: 'Cool drink',
-                ingredient: 'orange',
-                progressPct: 75 
-            }
+            data: produce.statusObject()
         });
     }
 };

@@ -10,8 +10,8 @@ try {
         setMode: () => {}
     };
     var gpiop = {
-        setup: () => {},
-        write: () => {}
+        setup: () => Promise.resolve(true),
+        write: () => Promise.resolve(true)
     };
 }
 

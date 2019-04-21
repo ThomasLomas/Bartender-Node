@@ -35,7 +35,13 @@ export class StatusComponent implements OnInit, OnDestroy {
         this.barValue = message.data['progressPct'];
         this.status = `Producing a ${message.data['recipe']}`;
         this.statusClass = 'status-producing';
-        this.statusDesc = `Currently pouring ${message.data['ingredient']}`;
+        this.statusDesc = `Finished pouring ${message.data['amountIngredientsComplete']}/${message.data['amountIngredients']}`;
+      } else if(message.data['status'] === 'collect') {
+        this.barMode = 'buffer';
+        this.barValue = message.data['progressPct'];
+        this.status = `Ready to collect`;
+        this.statusClass = 'status-ready';
+        this.statusDesc = `Your ${message.data['recipe']} is ready to collect`;
       } else {
         this.barMode = 'query';
         this.barValue = 0;

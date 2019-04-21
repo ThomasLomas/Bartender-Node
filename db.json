@@ -35,31 +35,37 @@
   ],
   "pumps": [
     {
+      "_id": "5cbce1ba9ed332427cb20204",
       "name": "Pump 1",
       "pin": 17,
-      "value": "gin"
+      "value": "5cbcda5c98d49541c04cc1ab"
     },
     {
+      "_id": "5cbce1bf9ed332427cb20205",
       "name": "Pump 2",
       "pin": 27,
-      "value": "tonic"
+      "value": "5cbcda7998d49541c04cc1ac"
     },
     {
+      "_id": "5cbce1c49ed332427cb20206",
       "name": "Pump 3",
       "pin": 22,
       "value": null
     },
     {
+      "_id": "5cbce1c79ed332427cb20207",
       "name": "Pump 4",
       "pin": 23,
       "value": null
     },
     {
+      "_id": "5cbce1de9ed332427cb20208",
       "name": "Pump 5",
       "pin": 24,
       "value": null
     },
     {
+      "_id": "5cbce1e29ed332427cb20209",
       "name": "Pump 6",
       "pin": 25,
       "value": null
@@ -67,56 +73,63 @@
   ],
   "recipes": [
     {
+      "_id": "5cbce1789ed332427cb201fd",
       "name": "Rum & Coke",
       "ingredients": {
-        "rum": 50,
-        "coke": 150
+        "5cbcda7d98d49541c04cc1ad": 50,
+        "5cbcda8098d49541c04cc1ae": 150
       }
     },
     {
+      "_id": "5cbce18e9ed332427cb201fe",
       "name": "Gin & Tonic",
       "ingredients": {
-        "gin": 50,
-        "tonic": 150
+        "5cbcda5c98d49541c04cc1ab": 50,
+        "5cbcda7998d49541c04cc1ac": 150
       }
     },
     {
+      "_id": "5cbce1929ed332427cb201ff",
       "name": "Long Island",
       "ingredients": {
-        "gin": 15,
-        "rum": 15,
-        "vodka": 15,
-        "tequila": 15,
-        "coke": 100,
-        "oj": 30
+        "5cbcda5c98d49541c04cc1ab": 15,
+        "5cbcda7d98d49541c04cc1ad": 15,
+        "5cbcda8598d49541c04cc1af": 15,
+        "5cbcda8d98d49541c04cc1b1": 15,
+        "5cbcda8098d49541c04cc1ae": 100,
+        "5cbcda8998d49541c04cc1b0": 30
       }
     },
     {
+      "_id": "5cbce1979ed332427cb20200",
       "name": "Screwdriver",
       "ingredients": {
-        "vodka": 50,
-        "oj": 150
+        "5cbcda8598d49541c04cc1af": 50,
+        "5cbcda8998d49541c04cc1b0": 150
       }
     },
     {
+      "_id": "5cbce19c9ed332427cb20201",
       "name": "Margarita",
       "ingredients": {
-        "tequila": 50,
-        "mmix": 150
+        "5cbcda8d98d49541c04cc1b1": 50,
+        "5cbcda9098d49541c04cc1b2": 150
       }
     },
     {
+      "_id": "5cbce1a09ed332427cb20202",
       "name": "Gin & Juice",
       "ingredients": {
-        "gin": 50,
-        "oj": 150
+        "5cbcda5c98d49541c04cc1ab": 50,
+        "5cbcda8998d49541c04cc1b0": 150
       }
     },
     {
+      "_id": "5cbce1a69ed332427cb20203",
       "name": "Tequila Sunrise",
       "ingredients": {
-        "tequila": 50,
-        "oj": 150
+        "5cbcda8d98d49541c04cc1b1": 50,
+        "5cbcda8998d49541c04cc1b0": 150
       }
     }
   ]

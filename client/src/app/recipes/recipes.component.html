@@ -1,3 +1,15 @@
-<p>
-  recipes works!
-</p>
+<section fxLayout="row wrap" fxLayoutAlign="left left" fxLayoutGap="20px" fxLayoutGap.xs="0">
+  <mat-card *ngFor="let recipe of recipes" fxFlex="300px" fxFlex.xs="100%">
+    <mat-card-header>
+      <mat-card-title>{{ recipe.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient.name }}</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button type="button" (click)="pour(recipe)">Pour</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

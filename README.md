@@ -15,4 +15,4 @@ Update the environment config in client/src/environments.prod.ts for the IP of t
 
 # Flow Rate
 
-50 seconds = 60ml 
+1.2 seconds = 1ml

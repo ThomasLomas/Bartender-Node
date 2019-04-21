@@ -1,4 +1,6 @@
 module.exports = {
+    RecipesListRequest: require('./recipesListRequest'),
     StatusRequest: require('./statusRequest'),
-    IngredientsListRequest: require('./ingredientsListRequest')
+    IngredientsListRequest: require('./ingredientsListRequest'),
+    PourRequest: require('./pourRequest')
 };
