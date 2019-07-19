@@ -1,36 +1,28 @@
 {
   "ingredients": [
     {
-      "name": "Gin",
+      "name": "Club Soda",
       "_id": "5cbcda5c98d49541c04cc1ab"
     },
     {
-      "name": "Tonic",
+      "name": "Half & Half",
       "_id": "5cbcda7998d49541c04cc1ac"
     },
     {
-      "name": "Rum",
+      "name": "Raspberry Syrup",
       "_id": "5cbcda7d98d49541c04cc1ad"
     },
     {
-      "name": "Coke",
+      "name": "Mango Syrup",
       "_id": "5cbcda8098d49541c04cc1ae"
     },
     {
-      "name": "Vodka",
+      "name": "Strawberry Syrup",
       "_id": "5cbcda8598d49541c04cc1af"
     },
     {
-      "name": "Orange Juice",
+      "name": "Peach Syrup",
       "_id": "5cbcda8998d49541c04cc1b0"
-    },
-    {
-      "name": "Tequila",
-      "_id": "5cbcda8d98d49541c04cc1b1"
-    },
-    {
-      "name": "Margarita Mix",
-      "_id": "5cbcda9098d49541c04cc1b2"
     }
   ],
   "pumps": [
@@ -50,86 +42,164 @@
       "_id": "5cbce1c49ed332427cb20206",
       "name": "Pump 3",
       "pin": 22,
-      "value": null
+      "value": "5cbcda7d98d49541c04cc1ad"
     },
     {
       "_id": "5cbce1c79ed332427cb20207",
       "name": "Pump 4",
       "pin": 23,
-      "value": null
+      "value": "5cbcda8098d49541c04cc1ae"
     },
     {
       "_id": "5cbce1de9ed332427cb20208",
       "name": "Pump 5",
       "pin": 24,
-      "value": null
+      "value": "5cbcda8598d49541c04cc1af"
     },
     {
       "_id": "5cbce1e29ed332427cb20209",
       "name": "Pump 6",
       "pin": 25,
-      "value": null
+      "value": "5cbcda8998d49541c04cc1b0"
     }
   ],
   "recipes": [
     {
       "_id": "5cbce1789ed332427cb201fd",
-      "name": "Rum & Coke",
+      "name": "Raspberry Italian Cream Soda",
       "ingredients": {
-        "5cbcda7d98d49541c04cc1ad": 50,
-        "5cbcda8098d49541c04cc1ae": 150
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda7d98d49541c04cc1ad": 44
       }
     },
     {
-      "_id": "5cbce18e9ed332427cb201fe",
-      "name": "Gin & Tonic",
+      "_id": "5cbce1789ed332427cb201fd1",
+      "name": "Mango Italian Cream Soda",
       "ingredients": {
-        "5cbcda5c98d49541c04cc1ab": 50,
-        "5cbcda7998d49541c04cc1ac": 150
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda8098d49541c04cc1ae": 44
       }
     },
     {
-      "_id": "5cbce1929ed332427cb201ff",
-      "name": "Long Island",
+      "_id": "5cbce1789ed332427cb201fd2",
+      "name": "Strawberry Italian Cream Soda",
       "ingredients": {
-        "5cbcda5c98d49541c04cc1ab": 15,
-        "5cbcda7d98d49541c04cc1ad": 15,
-        "5cbcda8598d49541c04cc1af": 15,
-        "5cbcda8d98d49541c04cc1b1": 15,
-        "5cbcda8098d49541c04cc1ae": 100,
-        "5cbcda8998d49541c04cc1b0": 30
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda8598d49541c04cc1af": 44
       }
     },
     {
-      "_id": "5cbce1979ed332427cb20200",
-      "name": "Screwdriver",
+      "_id": "5cbce1789ed332427cb201fd3",
+      "name": "Peach Italian Cream Soda",
       "ingredients": {
-        "5cbcda8598d49541c04cc1af": 50,
-        "5cbcda8998d49541c04cc1b0": 150
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda8998d49541c04cc1b0": 44
       }
     },
     {
-      "_id": "5cbce19c9ed332427cb20201",
-      "name": "Margarita",
+      "_id": "5cbce1789ed332427cb201fd4",
+      "name": "Raspberry Mango Italian Cream Soda",
       "ingredients": {
-        "5cbcda8d98d49541c04cc1b1": 50,
-        "5cbcda9098d49541c04cc1b2": 150
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda7d98d49541c04cc1ad": 22,
+        "5cbcda8098d49541c04cc1ae": 22
       }
     },
     {
-      "_id": "5cbce1a09ed332427cb20202",
-      "name": "Gin & Juice",
+      "_id": "5cbce1789ed332427cb201fd5",
+      "name": "Raspberry Peach Italian Cream Soda",
       "ingredients": {
-        "5cbcda5c98d49541c04cc1ab": 50,
-        "5cbcda8998d49541c04cc1b0": 150
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda7d98d49541c04cc1ad": 22,
+        "5cbcda8998d49541c04cc1b0": 22
       }
     },
     {
-      "_id": "5cbce1a69ed332427cb20203",
-      "name": "Tequila Sunrise",
+      "_id": "5cbce1789ed332427cb201fd6",
+      "name": "Strawberry Raspberry Italian Cream Soda",
       "ingredients": {
-        "5cbcda8d98d49541c04cc1b1": 50,
-        "5cbcda8998d49541c04cc1b0": 150
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda7d98d49541c04cc1ad": 22,
+        "5cbcda8598d49541c04cc1af": 22
+      }
+    },
+    {
+      "_id": "5cbce1789ed332427cb201fd7",
+      "name": "Strawberry Mango Italian Cream Soda",
+      "ingredients": {
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda8098d49541c04cc1ae": 22,
+        "5cbcda8598d49541c04cc1af": 22
+      }
+    },
+    {
+      "_id": "5cbce1789ed332427cb201fd8",
+      "name": "Strawberry Peach Italian Cream Soda",
+      "ingredients": {
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda8598d49541c04cc1af": 22,
+        "5cbcda8998d49541c04cc1b0": 22
+      }
+    },
+    {
+      "_id": "5cbce1789ed332427cb201fd9",
+      "name": "Peach Mango Italian Cream Soda",
+      "ingredients": {
+        "5cbcda5c98d49541c04cc1ab": 118,
+        "5cbcda7998d49541c04cc1ac": 15,
+        "5cbcda8098d49541c04cc1ae": 22,
+        "5cbcda8998d49541c04cc1b0": 22
+      }
+    },
+    {
+      "_id": "5cbce1789ed332427cb201f10",
+      "name": "Straight Club Soda",
+      "ingredients": {
+        "5cbcda5c98d49541c04cc1ab": 20
+      }
+    },
+    {
+      "_id": "5cbce1789ed332427cb201f11",
+      "name": "Straight Half & Half",
+      "ingredients": {
+        "5cbcda7998d49541c04cc1ac": 20
+      }
+    },
+    {
+      "_id": "5cbce1789ed332427cb201f12",
+      "name": "Straight Raspberry Syrup",
+      "ingredients": {
+        "5cbcda7d98d49541c04cc1ad": 20
+      }
+    },
+    {
+      "_id": "5cbce1789ed332427cb201f13",
+      "name": "Straight Mango Syrup",
+      "ingredients": {
+        "5cbcda8098d49541c04cc1ae": 20
+      }
+    },
+    {
+      "_id": "5cbce1789ed332427cb201f14",
+      "name": "Straight Strawberry Syrup",
+      "ingredients": {
+        "5cbcda8598d49541c04cc1af": 20
+      }
+    },
+    {
+      "_id": "5cbce1789ed332427cb201f15",
+      "name": "Straight Peach Syrup",
+      "ingredients": {
+        "5cbcda8998d49541c04cc1b0": 20
       }
     }
   ]

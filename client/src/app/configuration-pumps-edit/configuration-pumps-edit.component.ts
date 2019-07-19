@@ -43,7 +43,7 @@ export class ConfigurationPumpsEditComponent implements OnInit {
         }
 
         this.pump = findPump;
-        this.pumpForm.setValue({ ingredient: this.pump.value });
+//        this.pumpForm.setValue({ ingredient: this.pump.value });
       });
     })
 
