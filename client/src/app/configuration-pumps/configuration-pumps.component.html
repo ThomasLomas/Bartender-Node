@@ -1,3 +1,25 @@
-<p>
-  configuration-pumps works!
-</p>
+<table mat-table [dataSource]="pumps">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="pin">
+    <th mat-header-cell *matHeaderCellDef> Pin </th>
+    <td mat-cell *matCellDef="let element"> {{element.pin}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ingredient">
+    <th mat-header-cell *matHeaderCellDef> Ingredient </th>
+    <td mat-cell *matCellDef="let element"> {{element.ingredient}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let element"><a [routerLink]="['/configuration/pumps', element._id]" mat-button color="primary">Edit Pump</a></td>
+  </ng-container>
+  
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

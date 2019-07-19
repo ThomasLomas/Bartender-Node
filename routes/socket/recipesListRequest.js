@@ -34,8 +34,6 @@ module.exports = class RecipesListRequest {
             return recipe;
         });
 
-        console.log(recipes);
-        
         socket.send({
             type: 'RecipesList',
             data: {

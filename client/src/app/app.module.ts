@@ -18,6 +18,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfigurationPumpsComponent } from './configuration-pumps/configuration-pumps.component';
 import { ConfigurationRecipesComponent } from './configuration-recipes/configuration-recipes.component';
+import { ConfigurationPumpsEditComponent } from './configuration-pumps-edit/configuration-pumps-edit.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ConfigurationRecipesComponent } from './configuration-recipes/configura
     ConfigurationIngredientsComponent,
     ConfigurationIngredientsCreateComponent,
     ConfigurationPumpsComponent,
-    ConfigurationRecipesComponent
+    ConfigurationRecipesComponent,
+    ConfigurationPumpsEditComponent
   ],
   imports: [
     BrowserModule,
